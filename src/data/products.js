@@ -168,7 +168,9 @@ export const products = [
 export const categories = ['ALL', ...new Set(products.map(p => p.category))]
 
 // 根据图片文件名获取完整路径
+// 使用 import.meta.env.BASE_URL 来适配 GitHub Pages 的 base path
 export const getImagePath = (imageName) => {
-  return `/productPictures/${imageName}`
+  const baseUrl = import.meta.env.BASE_URL
+  return `${baseUrl}productPictures/${imageName}`
 }
 

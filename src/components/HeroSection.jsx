@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
         style={{
-          backgroundImage: `url('/HeroSectionPictures/Hero1.png')`
+          backgroundImage: `url('${import.meta.env.BASE_URL}HeroSectionPictures/Hero1.png')`
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
