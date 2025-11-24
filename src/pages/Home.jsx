@@ -7,14 +7,26 @@ import ContactSection from '../components/ContactSection'
 
 const Home = () => {
   return (
-    <div>
-      <HeroSection />
-      <ProductShowcase />
-      <Advantages />
-      <RecentProducts />
-      <CompanyIntro />
-      <ContactSection />
-    </div>
+    <>
+      <section className="snap-section">
+        <HeroSection />
+      </section>
+      <section className="snap-section">
+        <ProductShowcase />
+      </section>
+      <section className="snap-section">
+        <Advantages />
+      </section>
+      <section className="snap-section">
+        <RecentProducts />
+      </section>
+      <section className="snap-section">
+        <CompanyIntro />
+      </section>
+      <section className="snap-section">
+        <ContactSection />
+      </section>
+    </>
   )
 }
 

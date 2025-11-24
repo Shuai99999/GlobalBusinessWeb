@@ -45,8 +45,7 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
                   <p className="text-gray-600">
-                    Dingcheng Industrial Park, Lanshan District,<br />
-                    Linyi City, Shandong Province, China
+                    100 Donald Blvd, Red Deer, AB T4N 5H5
                   </p>
                 </div>
               </div>
@@ -57,7 +56,11 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600">+86-17653953909</p>
+                  <p className="text-gray-600">
+                    <a href="tel:+15878760888" className="hover:text-primary transition-colors">+1 5878760888</a>
+                    <br />
+                    <a href="tel:+14035055756" className="hover:text-primary transition-colors">+1 4035055756</a>
+                  </p>
                 </div>
               </div>
 
@@ -67,7 +70,11 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">amy@aozhanflag.com</p>
+                  <p className="text-gray-600">
+                    <a href="mailto:gaoshuai099@gmail.com" className="hover:text-primary transition-colors">gaoshuai099@gmail.com</a>
+                    <br />
+                    <a href="mailto:togunmuko@gmail.com" className="hover:text-primary transition-colors">togunmuko@gmail.com</a>
+                  </p>
                 </div>
               </div>
 
@@ -77,7 +84,11 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h3>
-                  <p className="text-gray-600">+86-17653953909</p>
+                  <p className="text-gray-600">
+                    <a href="https://wa.me/15878760888" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+1 5878760888</a>
+                    <br />
+                    <a href="https://wa.me/14035055756" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+1 4035055756</a>
+                  </p>
                 </div>
               </div>
             </div>

@@ -11,15 +11,31 @@ const Footer = () => {
             <div className="space-y-2">
               <p className="flex items-start">
                 <span className="mr-2">📍</span>
-                <span>Dingcheng Industrial Park, Lanshan District, Linyi City, Shandong Province, China</span>
+                <span>100 Donald Blvd, Red Deer, AB T4N 5H5</span>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📞</span>
-                <span>+86-17653953909</span>
+                <span>
+                  <a href="tel:+15878760888" className="hover:text-white transition-colors">+1 5878760888</a>
+                  <span className="mx-1">/</span>
+                  <a href="tel:+14035055756" className="hover:text-white transition-colors">+1 4035055756</a>
+                </span>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">✉️</span>
-                <span>amy@aozhanflag.com</span>
+                <span>
+                  <a href="mailto:gaoshuai099@gmail.com" className="hover:text-white transition-colors">gaoshuai099@gmail.com</a>
+                  <span className="mx-1">/</span>
+                  <a href="mailto:togunmuko@gmail.com" className="hover:text-white transition-colors">togunmuko@gmail.com</a>
+                </span>
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">💬</span>
+                <span>
+                  <a href="https://wa.me/15878760888" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+1 5878760888</a>
+                  <span className="mx-1">/</span>
+                  <a href="https://wa.me/14035055756" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+1 4035055756</a>
+                </span>
               </p>
             </div>
           </div>

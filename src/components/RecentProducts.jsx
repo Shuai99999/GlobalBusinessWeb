@@ -1,56 +1,17 @@
-import { Link } from 'react-router-dom'
+import { products } from '../data/products'
+import ProductCard from './ProductCard'
+
+// 随机选择产品的函数（排除已显示的产品）
+const getRandomProducts = (count, excludeIds = []) => {
+  const available = products.filter(p => !excludeIds.includes(p.id))
+  const shuffled = [...available].sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, count)
+}
 
 const RecentProducts = () => {
-  const products = [
-    {
-      id: 1,
-      title: 'Custom any size flag and banner add your own logo',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'FLAG'
-    },
-    {
-      id: 2,
-      title: 'Cheap Digital Printing Polyester Banner Flag 3X5FT Custom Flag',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'BANNER'
-    },
-    {
-      id: 3,
-      title: 'Custom Printing Polyester 12x18 inches All Country National Car Window Banner',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'BANNER'
-    },
-    {
-      id: 4,
-      title: 'NEW Christmas Household Hanging Flag Santa Claus Snowman',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'FLAG'
-    },
-    {
-      id: 5,
-      title: 'Custom DIY 12x18 inch Sublimation Blank White Car Flag',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'FLAG'
-    },
-    {
-      id: 6,
-      title: 'Custom Sublimation Print Elastic Fabrics Car Hood Cover',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'BANNER'
-    },
-    {
-      id: 7,
-      title: 'Personalized Team Logo Flag Crystal Desk Flag Stand',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'DISPLAY STAND'
-    },
-    {
-      id: 8,
-      title: 'Custom Little Table Flag Designed For Special Events',
-      image: 'https://www.aozhanflag.com/uploadfile/2024/0428/20240428025523418.jpg',
-      category: 'DISPLAY STAND'
-    }
-  ]
+  // 随机选择8个产品（与ProductShowcase不重复）
+  // 这里简单处理，实际可以传递已显示的产品ID来避免重复
+  const recentProducts = getRandomProducts(8)
 
   return (
     <section className="py-16 bg-gray-50">
@@ -61,28 +22,8 @@ const RecentProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <Link
-              key={product.id}
-              to="/products"
-              className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute top-2 left-2 bg-primary text-white px-2 py-1 rounded text-xs font-semibold">
-                  {product.category}
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-primary transition-colors">
-                  {product.title}
-                </h3>
-              </div>
-            </Link>
+          {recentProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

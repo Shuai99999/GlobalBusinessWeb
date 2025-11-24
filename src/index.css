@@ -18,6 +18,38 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* 滚动对齐效果 */
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hero section 特殊处理，因为它已经有 h-screen */
+.snap-section:first-child > * {
+  min-height: 100vh;
+}
+
+/* 移动端使用更宽松的对齐方式 */
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  
+  .snap-section {
+    scroll-snap-stop: normal;
+  }
 }
 
 /* 滚动动画优化 */
